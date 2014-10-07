@@ -1,0 +1,208 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Stylish Curriculum Vitae
+% LaTeX Template
+% Version 1.0 (18/7/12)
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper, oneside, final]{scrartcl} % Paper options using the scrartcl class
+
+\usepackage{scrpage2} % Provides headers and footers configuration
+\usepackage{titlesec} % Allows creating custom \section's
+\usepackage{marvosym} % Allows the use of symbols
+\usepackage{tabularx,colortbl} % Advanced table configurations
+\usepackage{fontspec} % Allows font customization
+\usepackage{enumitem} % removes restriction put on left margin
+\usepackage{hyperref} %package to write url
+
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont{Adobe Garamond Pro} % Main document font
+
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule] % Section formatting
+
+\pagestyle{scrheadings} % Print the headers and footers on all pages
+
+\addtolength{\voffset}{-0.5in} % Adjust the vertical offset - less whitespace at the top of the page
+\addtolength{\textheight}{1.5in} % Adjust the text height - less whitespace at the bottom of the page
+
+\newcommand{\gray}{\rowcolor[gray]{.90}} % Custom highlighting for the work experience and education sections
+
+%----------------------------------------------------------------------------------------
+% ÊFOOTER SECTION
+%----------------------------------------------------------------------------------------
+
+\renewcommand{\headfont}{\normalfont\rmfamily\scshape} % Font settings for footer
+
+\cofoot{
+\addfontfeature{LetterSpace=20.0}\fontsize{12.5}{17}\selectfont % Letter spacing and font size
+
+SMVDU {\large\textperiodcentered} Katra {\large\textperiodcentered} India 182302\\ % Your mailing address
+ \ {\Large\Telefon} +91-9797517873 % Your email address and phone number
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\begin{center} % Center everything in the document
+
+%----------------------------------------------------------------------------------------
+% ÊHEADER SECTION
+%----------------------------------------------------------------------------------------
+
+{\addfontfeature{LetterSpace=20.0}\fontsize{24}{24}\selectfont\scshape Abhishek Choudhary} % Your name at the top
+\begin{center}% Your personal details after your name  
+Sophomore Undergraduate\\
+School of Computer Science and Engineering\\
+Shri Mata Vaishno Devi Unversity, J\&K, India\\
+{\Large\Letter} acabhishek942@gmail.com\space{}\space{}   {\Large\Telefon} +91-9797517873 \\
+\end{center}
+
+\vspace{0.5cm} % Extra whitespace after the large name at the top
+
+%----------------------------------------------------------------------------------------
+%	OBJECTIVE
+%----------------------------------------------------------------------------------------
+
+\section{Objective}
+
+A position in the field of computers with special interests in business applications \\ programming, information processing, and management systems.
+
+%----------------------------------------------------------------------
+%   AREAS OF INTEREST
+%-----------------------------------------------------------------
+\section{Areas Of Interest}
+\begin{description}[leftmargin=\dimexpr 26pt-.5in]
+\setlength{\itemindent}{.75in}
+  \item[$\bullet$]  {\bfseries Web Application Development}
+  \item[$\bullet$]  {\bfseries Unit Testing}
+  \item[$\bullet$]  {\bfseries Big Data}
+  \item[$\bullet$]  {\bfseries Artificial Intelligence}(Natural Language Processing \& Machine Learning)
+  
+  
+\end{description}
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Work Experience}
+
+\begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
+\gray Period & \textbf{June 2014 --- July 2014}\\
+\gray Employer & \textbf{BGM Policy Innovations} \hfill Hyderabad, India\\
+\gray Job Title & \textbf{Intern}\\
+\gray Languages & \textbf{Python}\\
+\end{tabularx}\\
+\begin{flushleft}
+Following were the projects I worked on during the internship.
+\end{flushleft}
+\begin{description}[leftmargin=\dimexpr 26pt-.5in]
+
+\setlength{\itemindent}{.75in}
+  \item[$\ast$]  Web application for documents archiving(Using Django).
+  \item[$\ast$]  Unit testing of HTML to \LaTeX\space{}converter
+  \item[$\ast$]  Unit Testing of Utility functions developed by in-house team. Link to version-\space{}\space{}\space{}\space{}\space{}\space{}0.0.6(\url{http://goo.gl/C5vpJJ})
+
+  
+\end{description}
+
+
+\vspace{12pt}
+
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
+\gray Period & \textbf{August 2012 --- Present}\\
+\gray Degree & \textbf{Bachelor of Compter Science and Enginering}\\
+
+\gray University & \textbf{Shri Mata Vaishno Devi University} \hfill J\&K, India\\
+%& Extra information about degree
+\end{tabularx}
+
+\vspace{12pt}
+
+\begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
+\gray Period & \textbf{June 2010 --- March 2012}\\
+\gray Degree & \textbf{Senior Secondary}\\
+\gray Rank & \textbf{With Distinction}\\
+\gray University & \textbf{Maharashtra University} \hfill Maharashtra, India\\
+%& Extra information about degree
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+
+\section{Skills}
+
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Computer Languages & Python, Java, SHELLScript, C/C++,\\
+%Protocols \& APIs & XML, JSON, SOAP, REST. \\
+Databases & MySQL, PostgreSQL, Redis. \\
+Tools & Github/Gitlab,Django, NLTK, Pandas, NetBeans, Eclipse, \LaTeX.\\
+OSeS & Ubuntu, Elementary, Windows, Kali. 
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+% PROJECTS
+%-----------------------------------------------------------------
+\section{Projects}
+\begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
+\gray Project & \textbf{Student \& Staff Registration System}\\
+\gray Supervisor & \textbf{Dr. Ajay Kaul} \hfill Katra, India\\
+\gray University & \textbf{SMVDU}\\
+\gray Description & \textbf{Allows new students and staff to register with the School of Computer Science and Engineering and later view their details}
+\end{tabularx}\\
+\vspace{0.75cm}
+\begin{tabularx}{0.97\linewidth}{>{\raggedleft\scshape}p{2cm}X}
+\gray Project & \textbf{Guest House Management}\\
+\gray Supervisor & \textbf{Dr. Sunanda Gupta} \hfill Katra, India\\
+\gray University & \textbf{SMVDU}\\
+\gray Description & \textbf{1. To provide details of accommodation}\\
+\gray \space{} & \textbf{2. Access the services to customer faster}\\
+
+					 
+
+
+\end{tabularx}\\
+
+%---------------------------------------------------------------------------------------------------------
+% WORKSHOPS
+%----------------------------------------------------------------------------------------------------------\
+\section{Workshops}
+\begin{itemize}
+
+\item[$\bullet$] {\large Attended Robotics workshop organised by Robosapiens Ltd. at Shri Mata Vaishno Vaishno
+Devi University during Titiksha-2013. Got selected to represent SMVDU at IIT-Delhi to participate in the zonal competetion}
+\item[$\bullet$] {\large Attended Aakash Android Application programming workshop conducted by IIT BOMBAY
+from 23-24 Feb \& 2nd-3rd Mar 2013. The objective of the workshop was to provide students
+,an insight into emerging field of Android App development.}
+\item[$\bullet$] {\large Member of the co-ordinating team that conducted workshops during weeklong celebration of Software Freedom Day(2014) at Shri Mata Vaishno Devi University.}
+\end{itemize}
+%------------------------------------------------------------------------------------------------------------
+%   CO-CURRICULAR ACTIVITIES
+%------------------------------------------------------------------------------------------------------------
+\section{Co-crricular Activities}
+\begin{enumerate}
+\item {\large {\bfseries First Prize} in movie making for \textit{Rajneeti @SMVDU} during Resurgence'14(inter university)
+at SMVDU, J\&K.}
+\item {\large Played in inter district Chess competition in 2010.}
+\item {\large Received {\bfseries First Prize} in inter university skit competition in Resurgence'14 (Youth Fest).}
+\item {\large {\bfseries Second Prize} in intra university sports competition in Resurgence'14 for \textit{Futsual}.}
+\end{enumerate}
+\section{Personal Information}
+
+\end{center}
+
+\end{document}
