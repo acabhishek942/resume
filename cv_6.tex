@@ -20,6 +20,7 @@
 \usepackage{enumitem} % removes restriction put on left margin
 \usepackage{hyperref} %package to write url
 
+
 \defaultfontfeatures{Mapping=tex-text}
 %\setmainfont{Adobe Garamond Pro} % Main document font
 
@@ -31,6 +32,23 @@
 \addtolength{\textheight}{1.5in} % Adjust the text height - less whitespace at the bottom of the page
 
 \newcommand{\gray}{\rowcolor[gray]{.90}} % Custom highlighting for the work experience and education sections
+
+\newcommand{\cvdoublecolumn}[2]{%
+  \cvitem[0.75em]{}{%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#1\end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#2\end{minipage}%
+    }%
+}
+
+\newcommand{\cvreference}[7]{%
+    \textbf{#1}\newline% Name
+    \ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
+    \ifthenelse{\equal{#3}{}}{}{#3\newline}%
+    \ifthenelse{\equal{#4}{}}{}{#4\newline}%
+    \ifthenelse{\equal{#5}{}}{}{#5\newline}%
+    \ifthenelse{\equal{#6}{}}{}{\emailsymbol~\texttt{#6}\newline}%
+    \ifthenelse{\equal{#7}{}}{}{\phonesymbol~#7}}
 
 %----------------------------------------------------------------------------------------
 % ÊFOOTER SECTION
@@ -106,7 +124,9 @@ Following were the projects I worked on during the internship.
 \setlength{\itemindent}{.75in}
   \item[$\ast$]  Web application for documents archiving(Using Django).
   \item[$\ast$]  Unit testing of HTML to \LaTeX\space{}converter
-  \item[$\ast$]  Unit Testing of Utility functions developed by in-house team. Link to version-\space{}\space{}\space{}\space{}\space{}\space{}0.0.6(\url{http://goo.gl/C5vpJJ})
+  \item[$\ast$]  Unit Testing of Utility functions developed by in-house team. \href{http://goo.gl/C5vpJJ}{\textrm Link} to version\begin{verbatim}
+          0.0.6.
+\end{verbatim}   
 
   
 \end{description}
@@ -224,7 +244,36 @@ Katra, Jammu \& Kashmir, India (+91-9797517873)}\\
 %   REFRENCES
 %-------------------------------------------------------------------------------------------------------------
 \section{Refrences}
-
+\begin{tabular}{lr}
+% Refrence 1
+\begin{minipage}[t]{3.5in}
+\textbf{Dr.Ajay Kaul}\\
+Shri Mata Vaishno Devi University\\
+Jammu \& Kashmir, India\\
+\Telefon\ +00 1 234 5678\\
+\Letter\ \href{mailto:ajay.kaul@smvdu.ac.in}{ajay.kaul[at]smvdu.ac.in}
+\end{minipage}
+&
+% Refrence 2
+\begin{minipage}[t]{2.5in}
+\textbf{Dr.Sunanda Gupta}\\
+Shri MAta Vaishno Devi University\\
+Jammu \& Kashmir, India\\
+\Telefon\ 01991-285524\\
+\Letter\ \href{mailto:sunanda.gupta@smvdu.ac.in }{sunanda.gupta@smvdu.ac.in }
+\end{minipage}
+\\
+\\ % Additional newline for spacing.
+% Referee 3
+\begin{minipage}[t]{2.5in}
+\textbf{Pankaj Singh}\\
+Technical Lead\\
+Policy Innovations\\
+Hyderabad, India\\
+\Telefon\ +91-9618754327\\
+\Letter\ \href{mailto:pankaj@policyinnovations.in}{pankaj@policyinnovations.in}
+\end{minipage}
+\end{tabular}
 \end{center}
 
 \end{document}
